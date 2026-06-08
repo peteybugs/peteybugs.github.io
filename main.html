@@ -1,0 +1,58 @@
+﻿<!-- Peter eng 4u site main -->
+<!-- Draft and testing phase -->
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title> Peter site </title>
+</head>
+<body bgcolor=black link="green" vliink=#7fffd5 alink=#7fffd4>
+    <font color=green size="4">
+        <marquee> This is a website for some information about me, hey </marquee>
+        <div class="musictime">
+            <center> <button style="background-color: black; color: green" id="dynamic-btn">Play BGM</button> </center>
+            <br /> <center> <button style="background-color: black; color: green" id="nein-btn">No BGM</button></center> <br /><br />
+            <div id='bgmname' hidden width="100%"> <marquee behavior="alternate" direction="right" width = "50%" align="center" scrollamount="2" hspace="25%"> Now playing: Restore </marquee></div>
+            <script>
+                const dynamicBtn = document.getElementById('dynamic-btn'); const neinbtn = document.getElementById('nein-btn');
+                let bgm = new Audio('restore.mp3'); bgm.volume = 0.15; bgm.loop = true;
+                neinbtn.style.display = 'none';
+                let buttonvalue = 0;
+                // restore saved state const saved = localStorage.getItem('buttonvalue'); // '1' or '0' if (saved === '1') { bgm.play().catch(() => {}); dynamicBtn.style.display = 'none'; neinbtn.style.display = 'block'; }
+                dynamicBtn.addEventListener('click', () => {
+                    bgm.play().catch(() => { });
+                    dynamicBtn.style.display = 'none';
+                    neinbtn.style.display = 'block';
+                    localStorage.setItem('buttonvalue', '1');
+                    bgmname.removeAttribute("hidden");
+                });
+                neinbtn.addEventListener('click', () => {
+                    bgm.pause();
+                    bgm.currentTime = 0;
+                    dynamicBtn.style.display = 'block';
+                    neinbtn.style.display = 'none';
+                    localStorage.setItem('buttonvalue', '0');
+                    bgmname.setAttribute("hidden", "true");
+                });</script>
+        </div>
+        <table align="center" cellpadding="10" cellspacing="10">
+            <tr>
+                <th>
+                    <a href="https://peteybugs.github.io/aboutme"> About me </a>
+                </th>
+                <th>
+                    <a href="https://peteybugs.github.io/hobbies"> <strike> Addictions </strike> hobbies </a>
+                </th>
+                <th>
+                    <a href="https://peteybugs.github.io/interests"> Interests </a>
+                </th>
+                <th>
+                    <a href="https://peteybugs.github.io/updates"> Updates </a>
+                </th>
+            </tr>
+        </table>
+
+    </font>
+</body>
+</html>
