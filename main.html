@@ -8,13 +8,13 @@
     <meta charset="utf-8" />
     <title> Peter site </title>
 </head>
-<body bgcolor=black link="green" vliink="#006400" alink=#7fffd4>
+<body bgcolor=black link="green" vliink=#006400 alink=#7fffd4>
     <font color=green size="4">
-        <marquee> This is a website for some information about me, hey </marquee>
+        <marquee> This is the main area of my personal site, hello web surfer </marquee>
         <div class="musictime">
             <center> <button style="background-color: black; color: green" id="dynamic-btn">Play BGM</button> </center>
             <br /> <center> <button style="background-color: black; color: green" id="nein-btn">No BGM</button></center> <br /><br />
-            <div id='bgmname' hidden width="100%"> <marquee behavior="alternate" direction="right" width = "50%" align="center" scrollamount="2" hspace="25%"> Now playing: Restore </marquee></div>
+            <div id='bgmname' hidden width="100%"> <marquee behavior="alternate" direction="right" width="50%" align="center" scrollamount="2" hspace="25%"> Now playing: Restore </marquee></div>
             <script>
                 const dynamicBtn = document.getElementById('dynamic-btn'); const neinbtn = document.getElementById('nein-btn');
                 let bgm = new Audio('assets/audio/Restore.mp3'); bgm.volume = 0.15; bgm.loop = true;
@@ -53,7 +53,16 @@
                 </th>
             </tr>
         </table>
-
+        <div style="display: flex; justify-content: right;">
+        <marquee behavior="slide" direction="left" width="56%" align="center" scrollamount="4"> Welcome to </marquee>
+        </div>
+        <div style="display: flex; justify-content: left;">
+            <marquee behavior="slide" direction="right" width="56%" align="center" scrollamount="4"> <font size="5">My site</font></marquee>
+        </div>
+            <img align="right" width="300" height="168" src="assets/images/ksptitle.jpg" />
+            <img align="left" width="500" height="375" src="assets/images/roadtripforsite.jpg" />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <img align="right" width="400" height="228" src="assets/images/a40.jpg" />
     </font>
 </body>
 </html>
