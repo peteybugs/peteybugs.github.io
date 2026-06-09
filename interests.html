@@ -14,7 +14,7 @@
             <div id='bgmname' hidden width="100%"> <marquee behavior="alternate" direction="right" width="50%" align="center" scrollamount="2" hspace="25%"> Now playing: Blue Archive ost 3 </marquee></div>
             <script>
                 const dynamicBtn = document.getElementById('dynamic-btn'); const neinbtn = document.getElementById('nein-btn');
-                let bgm = new Audio('peteybugs.github.io/assets/ブルーアーカイブ Blue Archive OST 3. Mischievous Step 4.mp3'); bgm.volume = 0.15; bgm.loop = true;
+                let bgm = new Audio('peteybugs/peteybugs.github.io/assets/ブルーアーカイブ Blue Archive OST 3. Mischievous Step 4.mp3'); bgm.volume = 0.15; bgm.loop = true;
                 neinbtn.style.display = 'none';
                 let buttonvalue = 0;
                 // restore saved state const saved = localStorage.getItem('buttonvalue'); // '1' or '0' if (saved === '1') { bgm.play().catch(() => {}); dynamicBtn.style.display = 'none'; neinbtn.style.display = 'block'; }
